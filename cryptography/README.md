@@ -78,7 +78,9 @@ Applying $P = (K - C) \pmod{26}$ with key `CYBR` across the message:
 | `X4yGcD` | `Y B R C Y` | X->B, y->d, G->L, c->a, D->V | `B4dLaV` | **badlav** (Hindi: "change") |
 
 ### Final Extracted Flag:
-$$\mathbf{BYTE\{bY73\_L8A\_ChuKA\_B4dLaV\}}$$
+```text
+BYTE{bY73_L8A_ChuKA_B4dLaV}
+```
 
 > **Cultural Meaning:**  
 > In Hinglish, the flag spells **"BYTE laa chuka badlav"** (*"BYTE has already brought change"*). This is a direct punchline to the previous recruitment flag: `BYTE{byte_laaega_badlaav_...}` (*"BYTE will bring change"*).

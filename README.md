@@ -188,7 +188,9 @@ The standalone executable will be output to `dist/PixelPry.exe`.
 3. **Known-Plaintext Attack (KPA):** Comparing the known prefix `BYTE{` with `BAIN{` reveals the 4-character repeating key:
    $$(P + C) \pmod{26} = \mathbf{CYBR}$$
 4. **Flag Meaning:** Applying key `CYBR` across the ciphertext recovers:
-   $$\mathbf{BYTE\{bY73\_L8A\_ChuKA\_B4dLaV\}}$$
+   ```text
+   BYTE{bY73_L8A_ChuKA_B4dLaV}
+   ```
    Translates in Hinglish/Leetspeak to *"BYTE laa chuka badlav"* (*"BYTE has already brought change"*).
 
 #### Automated Execution

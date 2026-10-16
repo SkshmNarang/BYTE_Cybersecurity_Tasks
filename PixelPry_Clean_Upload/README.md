@@ -169,7 +169,7 @@ The standalone executable will be output to `dist/PixelPry.exe`.
 4. **Reconstruction & Flag Extraction:**
    - Stripping the 12 corrupting bytes realigned all subsequent IDAT chunks to valid CRC checksums.
    - Expanding the canvas to $724 \times 850$ pixels revealed the hidden bottom banner:
-     $$\mathbf{flag\{g0t\_1t\_1n\_plA1n\_s1ght\}} \longrightarrow \mathbf{BYTE\{g0t\_1t\_1n\_plA1n\_s1ght\}}$$
+     `flag{g0t_1t_1n_plA1n_s1ght}` → `BYTE{g0t_1t_1n_plA1n_s1ght}`
    - Saved artifacts:
      - Recovered Image: [`ctf_challenges/challenge_recovered.png`](ctf_challenges/challenge_recovered.png)
      - Flag Banner: [`wiki/challenge_flag.png`](wiki/challenge_flag.png)
