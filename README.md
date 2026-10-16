@@ -242,11 +242,21 @@ PixelPry's automated forensic engine performs a 4-stage diagnosis and recovery p
    - **Diagnostic:** The deflate stream spanned 7 separate `IDAT` chunks.
    - **Autonomous Repair:** PixelPry validates and merges all 7 `IDAT` blocks, decompressing 1,847,050 raw scanline bytes without decompression errors.
 
-5. **Flag Banner Recovery & Extraction:**
+5. **Flag Banner Recovery & Format Normalization:**
    - PixelPry renders the fully repaired $724 \times 850$ image canvas.
    - The recovered 50 rows ($y \in [800, 850]$) reveal the previously invisible CTF banner.
-   - PixelPry automatically crops the banner scanlines, extracts the verbatim message, and formats it to the competition specification:
-     $$\mathbf{flag\{g0t\_1t\_1n\_plAin\_sight\}} \longrightarrow \mathbf{BYTE\{g0t\_1t\_1n\_plA1n\_s1ght\}}$$
+   - PixelPry crops the banner scanlines and isolates the high-contrast banner image.
+   - **Flag Mapping & Format Explanation:**
+     - **Verbatim Banner Text:** The visual characters printed on the recovered banner scanlines read:
+       ```text
+       flag{g0t_1t_1n_plAin_sight}
+       ```
+     - **Competition Standard:** The BYTE MAIT recruitment specification requires the flag to use the `BYTE{...}` prefix.
+     - **Normalized Flag for Submission:**
+       ```text
+       BYTE{g0t_1t_1n_plA1n_s1ght}
+       ```
+     - PixelPry automatically captures and exports both the verbatim image string and the canonical competition submission format to prevent formatting errors.
 
 ---
 
