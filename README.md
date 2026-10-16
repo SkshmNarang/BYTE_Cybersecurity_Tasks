@@ -164,7 +164,6 @@ The standalone executable will be output to `dist/PixelPry.exe`.
 |:---:|:---:|:---|:---:|:---|:---:|
 | **Task 01** | **Cryptography** | Ciphertext Cryptanalysis | ✅ **Solved** | `BYTE{bY73_L8A_ChuKA_B4dLaV}` | [cryptography/README.md](cryptography/README.md) |
 | **Task 02** | **Steganography** | Corrupted PNG Recovery | ✅ **Solved** | `BYTE{g0t_1t_1n_plA1n_s1ght}` | [Below / wiki/](wiki/README.md) |
-| **Task 03** | **Binary Exploitation** | Buffer Overflow Remote Service | 🔄 *In Progress* | `TBD` | *Coming Soon* |
 
 ---
 
