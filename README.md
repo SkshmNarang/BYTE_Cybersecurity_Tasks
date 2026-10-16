@@ -308,6 +308,10 @@ PixelPry's automated forensic engine performs a 4-stage diagnosis and recovery p
        ```text
        BYTE{g0t_1t_1n_plA1n_s1ght}
        ```
+     - **Mapping Transition:**
+       ```text
+       flag{g0t_1t_1n_plAin_sight}  ──>  BYTE{g0t_1t_1n_plA1n_s1ght}
+       ```
      - PixelPry automatically captures and exports both the verbatim image string and the canonical competition submission format to prevent formatting errors.
 
 ---

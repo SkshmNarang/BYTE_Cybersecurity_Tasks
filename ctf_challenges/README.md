@@ -93,8 +93,18 @@ python PixelPry.py ctf_challenges/challenge.png --save ctf_challenges/
    - The recovered 50 rows ($y \in [800, 850]$) reveal the previously invisible CTF banner.
    - PixelPry crops the banner scanlines and isolates the high-contrast banner image.
    - **Flag Mapping & Format Explanation:**
-     - **Verbatim Banner Text:** `flag{g0t_1t_1n_plAin_sight}`
-     - **Competition Standard Submission:** `BYTE{g0t_1t_1n_plA1n_s1ght}`
+     - **Verbatim Banner Text:**
+       ```text
+       flag{g0t_1t_1n_plAin_sight}
+       ```
+     - **Competition Standard Submission:**
+       ```text
+       BYTE{g0t_1t_1n_plA1n_s1ght}
+       ```
+     - **Mapping Transition:**
+       ```text
+       flag{g0t_1t_1n_plAin_sight}  ──>  BYTE{g0t_1t_1n_plA1n_s1ght}
+       ```
 
 ---
 
