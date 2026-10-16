@@ -21,7 +21,9 @@
   - [CLI Mode](#1-cli-mode)
   - [Interactive & Drag-and-Drop Mode](#2-interactive--drag-and-drop-mode)
   - [Building Standalone Windows Executable](#3-building-standalone-windows-executable)
-- [BYTE MAIT Task 02: Challenge Writeup](#byte-mait-task-02-challenge-writeup)
+- [BYTE MAIT Recruitment Tasks: Solutions & Writeups](#byte-mait-recruitment-tasks-solutions--writeups)
+  - [Task 01: Cryptography](#task-01-cryptography--ciphertext-cryptanalysis)
+  - [Task 02: Steganography](#task-02-steganography--corrupted-png-recovery)
 - [Forensic Wiki & Reference Suite (`wiki/`)](#forensic-wiki--reference-suite-wiki)
 - [Forensic Methodology & Caveats](#forensic-methodology--caveats)
 - [License](#license)
@@ -59,6 +61,10 @@
 
 ```text
 PixelPry/
+├── cryptography/              # Task 01: Cryptography solver & writeup
+│   ├── solve.py               # Automated Base64 + Beaufort solver script
+│   ├── README.md              # In-depth cryptanalysis & modular arithmetic proof
+│   └── cyberchef_recipe.json  # Exportable CyberChef recipe
 ├── assets/                    # Project branding, icons, and hero banners
 │   ├── PixelPry.ico           # Windows application icon
 │   └── pixelpry_banner.jpg    # High-resolution project thumbnail & banner
@@ -150,7 +156,52 @@ The standalone executable will be output to `dist/PixelPry.exe`.
 
 ---
 
-## BYTE MAIT Task 02: Challenge Writeup
+## BYTE MAIT Recruitment Tasks: Solutions & Writeups
+
+### 🏆 Challenge Progress Overview
+
+| Task # | Category | Challenge Name | Status | Flag Captured | Writeup Link |
+|:---:|:---:|:---|:---:|:---|:---:|
+| **Task 01** | **Cryptography** | Ciphertext Cryptanalysis | ✅ **Solved** | `BYTE{bY73_L8A_ChuKA_B4dLaV}` | [cryptography/README.md](cryptography/README.md) |
+| **Task 02** | **Steganography** | Corrupted PNG Recovery | ✅ **Solved** | `BYTE{g0t_1t_1n_plA1n_s1ght}` | [Below / wiki/](wiki/README.md) |
+| **Task 03** | **Binary Exploitation** | Buffer Overflow Remote Service | 🔄 *In Progress* | `TBD` | *Coming Soon* |
+
+---
+
+### Task 01: Cryptography — Ciphertext Cryptanalysis
+
+#### Challenge Overview
+- **Track:** Cybersecurity Recruitment — Task 01: Cryptography
+- **Problem Statement:** *"The challenge is a simple cipher challenge that has the flag in the format BYTE{...}."*
+- **Challenge Ciphertext:**
+  ```text
+  QkFJTntiQTczX1E4Ul9BcmhIQ19YNHlHY0R9
+  ```
+- **Solution Script:** [`cryptography/solve.py`](cryptography/solve.py)
+- **Flag Recovered:** `BYTE{bY73_L8A_ChuKA_B4dLaV}`
+
+#### Multi-Layer Cryptanalysis & Solution Summary
+1. **Layer 1 (Transport Encoding):** The 36-character string is Base64 encoded. Decoding yields the intermediate ciphertext:
+   ```text
+   BAIN{bA73_Q8R_ArhHC_X4yGcD}
+   ```
+2. **Layer 2 (Encryption Cipher):** The intermediate string is encrypted with the **Beaufort Cipher** ($P = (K - C) \pmod{26}$).
+3. **Known-Plaintext Attack (KPA):** Comparing the known prefix `BYTE{` with `BAIN{` reveals the 4-character repeating key:
+   $$(P + C) \pmod{26} = \mathbf{CYBR}$$
+4. **Flag Meaning:** Applying key `CYBR` across the ciphertext recovers:
+   $$\mathbf{BYTE\{bY73\_L8A\_ChuKA\_B4dLaV\}}$$
+   Translates in Hinglish/Leetspeak to *"BYTE laa chuka badlav"* (*"BYTE has already brought change"*).
+
+#### Automated Execution
+```bash
+python cryptography/solve.py
+```
+
+*For complete mathematical proofs and character-by-character tables, see [`cryptography/README.md`](cryptography/README.md).*
+
+---
+
+### Task 02: Steganography — Corrupted PNG Recovery
 
 ### Challenge Overview
 - **Track:** Cybersecurity Recruitment — Task 02: Steganography
