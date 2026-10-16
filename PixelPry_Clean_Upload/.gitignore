@@ -10,7 +10,9 @@ dist/
 # Temporary and build scratch
 *.tmp
 *.log
+*.zip
 history_temp.db
+brag-output/
 
 # Virtual environments
 .env

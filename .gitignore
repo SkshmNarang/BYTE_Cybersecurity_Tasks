@@ -11,8 +11,8 @@ dist/
 *.tmp
 *.log
 *.zip
-push_to_github.bat
 history_temp.db
+brag-output/
 
 # Virtual environments
 .env
