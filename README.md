@@ -162,8 +162,8 @@ The standalone executable will be output to `dist/PixelPry.exe`.
 
 | Task # | Category | Challenge Name | Status | Flag Captured | Writeup Link |
 |:---:|:---:|:---|:---:|:---|:---:|
-| **Task 01** | **Cryptography** | Ciphertext Cryptanalysis | ✅ **Solved** | `BYTE{bY73_L8A_ChuKA_B4dLaV}` | [cryptography/README.md](cryptography/README.md) |
-| **Task 02** | **Steganography** | Corrupted PNG Recovery | ✅ **Solved** | `BYTE{g0t_1t_1n_plA1n_s1ght}` | [Below / wiki/](wiki/README.md) |
+| **Task 01** | **Cryptography** | Ciphertext Cryptanalysis | ✅ **Solved** | `BYTE{bY73_L8A_ChuKA_B4dLaV}` | [Task 01 Writeup](cryptography/README.md) |
+| **Task 02** | **Steganography** | Corrupted PNG Recovery | ✅ **Solved** | `BYTE{g0t_1t_1n_plA1n_s1ght}` | [Task 02 Writeup](ctf_challenges/README.md) |
 
 ---
 
